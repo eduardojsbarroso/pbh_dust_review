@@ -1,0 +1,65 @@
+\documentclass[a4paper,11pt]{article}
+\pdfoutput=1 % if your are submitting a pdflatex (i.e. if you have
+             % images in pdf, png or jpg format)
+
+\usepackage[T1]{fontenc} % if needed
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% My Packages %%%%%%%%%%%%%%%%%
+\usepackage[english]{babel}
+\usepackage{braket}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{physics,slashed}
+\usepackage{graphicx}
+\usepackage[toc,page]{appendix}
+\usepackage{hyperref}
+\usepackage[noabbrev]{cleveref}
+
+\usepackage{xcolor}
+\usepackage{mdframed}
+
+\usepackage[hmarginratio=1:1]{geometry}
+
+\begin{document}
+We appreciate the interest in our paper and thank you for the time taken to review it. Regarding the points suggested, here are our thoughts on the matter:
+
+
+1 - a) To obtain the matter Lagrangian for this model, we employ the Schutz formalism. It assumes that the fluid's velocity can be expressed in terms of potentials of scalar fields, and the fluid's enthalpy is determined by the magnitude of the velocity. This allows us to write the Lagrangian as a functional of these fields. A detailed application of this formalism can be found in Ref.~\cite{fluidgeral}. We have included a brief description of this approach in Section 2.2 and corrected the cited references.
+
+1 - b) Indeed, if the sound speed were to approach zero, we would encounter a divergence problem. This is why we limit ourselves to small but non-zero equations of state for dust, which is in agreement with the literature. Regarding the $\zeta$ field, we can observe from the initial conditions in equation 3.32, along with the definitions of 
+z and the frequency, that the modes for $\zeta$ will evolve proportionally to 
+$\frac{1}{\sqrt{m \omega_k}} \propto c_s$, meaning that higher-order perturbative terms would evolve similarly.
+
+In \cite{vitenti}, the authors demonstrate that the first-order terms in the perturbative expansion are indeed smaller than the zero-order terms. To replicate this for higher-order terms, we would need to prove that all third-order terms are smaller than second-order terms in a general manner. Simply comparing one term in the expansion, such as $\zeta^3$ to $\zeta^2$, does not imply that all second-order terms in the Lagrangian are less significant than third-order terms. This kind of proof has not yet been addressed in the literature and is beyond the scope of this paper.
+
+We have reorganized Sections 4.3 and 4.4 and considered a very small, but non-zero, equation of state for dark matter to analyze the pressureless case.
+
+2 - a) DEMETRIO ADICIONAR
+
+2 - b) SANDRO ADICIONAR In our quantum model, we observe that there is a quantum contribution to the usual Friedmann equation. This contribution should not be interpreted as a new fluid but rather as an effective correction. Essentially, we use the classical fluid density with the scale factor following the Bohm trajectory.
+
+Moreover, if we compute the time in the universe when the quantum contribution reaches 10\% of the classical contribution, we find that this occurs only at scales very close to the bounce. At these timescales, the primordial black holes formed would have such small masses that they would evaporate quickly and thus would not affect our analysis. We restrict our study to times well before the bounce, where such quantum corrections are not significant. Therefore, we only consider $w_{matter}$ and not $w_{eff}$.
+
+We have added the calculation of the times when the quantum contribution becomes 10\% of the classical one to the paper.
+
+2 - c) At bouncing point, we have that \bar{H} = 0. However this means that the Eq. 2.16 will be zero, which englobes both the classical energy density plus the effective quantum contribution, which will be in fact relevant at this time. Thus, this condition does not imply that $\rho + p$ = 0 and the model does not suffer from ghost instability problems. We have added the calculation of the second Friedmann equation in section 2.2  
+
+2 - d) In Ref 33, it is given an initial wave function by Equation 44. However this is an initial condition set at the bounce. We see below Eq. 45 that the authors afirm: "Note that this solution has no singularities for whatever initial value of $a_b \neq 0$, and
+tends to the classical solution when $T \rightarrow \pm T$." The initial condition set at the bounce assures that there are no singularities in the model.
+
+Moreover, our model starts with $T = -\infty$ so there is a contracting phase for the scale factor. We have explicitly defined the initial time in the paragraph below Eq. 2.12.
+
+2 - e) From our definitions, the time variable does not depend on a scalar field, it depends on the fluid's energy density, which is also perturbed.
+
+SANDRO ADICIONAR
+
+3- DEMETRIO ADICIONAR
+
+4 - In Ref.~\cite{vitenti}, it is shown that for a Friedmann background with scalar perturbations, an appropriate gauge choice ensures the perturbative series remains valid in the bounce model. In our study, we focus on this model, leaving the exploration of a homogeneous and anisotropic background, specifically Bianchi-I models, for future work. A brief discussion of this possibility has been included in the conclusion.
+
+5 - In this work, $c$ is the speed of light, $\bar{\rho}$ is the matter energy density and $\delta\rho$ is the perturbation to the matter energy density. The aforementioned quantities were properly defined in the main text, along with other quantities that were used before their definitions. 
+
+\bibliographystyle{unsrt}
+\bibliography{g}
+\end{document}
