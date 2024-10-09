@@ -159,7 +159,7 @@ In the above framework, the total Hamiltonian takes the form
 
 \begin{align}
 \label{total_hamiltonian_FLRW}
-            H & = N\dpar{- \frac{\Pi_{\bar{a}}^{2} }{ 4\bar{a} } + \frac{\Pi_{T}}{\bar{a}^{3w}} } ,
+            {\cal H} & = N\dpar{- \frac{\Pi_{\bar{a}}^{2} }{ 4\bar{a} } + \frac{\Pi_{T}}{\bar{a}^{3w}} } ,
         \end{align}
         where 
         \begin{align}
@@ -170,25 +170,36 @@ In the above framework, the total Hamiltonian takes the form
         ,\end{align}
         are the canonical momenta associated with the scale factor $\bar{a}$ and $T$, 
         the latter being a variable that describes the fluid's evolution. Also, we denote the cosmic time derivative as $\frac{\partial q}{c\partial t} \equiv \dot{q}$, which has a dimension of one over length.
-        \textcolor{red}{The momentum $\Pi_T$ is related to the fluid's degree of freedom and is given by $\Pi_T = c^{-1} \tilde{V} \bar{a}^{3(1 + w)} \bar{\rho}$, where $\tilde{V}$ represents the conformal spatial volume, and the fluid's density is a function of enthalpy and entropy.} Remarkably, $\Pi_T$ appears linearly in the Hamiltonian, and its classical equation of motion is given by
-        $\dot{T} = { N }/{ \bar{a}^{3w} }$, implying $\dot{T} > 0$ and making $T$ a monotonic function of classical time. Hence, $T$ can be used as a time variable, allowing us to write a Schrödinger-like equation by choosing $N = \bar{a}^{3w} \implies \dot{T} = 1$. For the details, see Ref.~\cite{fluidgeral}. 
-        
-        Canonical quantization is then performed by promoting classical variables to operators satisfying the canonical commutation relations. This process yields the following Wheeler-DeWitt equation for the wavefunction of the universe  $\Psi(\bar{a}, T)$ \cite{nelson_peter_bouncing_original}
-                \begin{equation}
+        \textcolor{red}{The momentum $\Pi_T$ is related to the fluid's degree of freedom and is given by $\Pi_T = c^{-1} \tilde{V} \bar{a}^{3(1 + w)} \bar{\rho}$, where $\tilde{V}$ represents the conformal spatial volume, and the fluid's density is a function of enthalpy and entropy.} 
+        {\color{red}
+        Canonical quantization is then performed by promoting classical variables to operators satisfying the canonical commutation relations\footnote{\color{red} Note that we quantize only the dynamical variables $a,T$ while $N$ is kept classical, for it is not a dynamical degree of freedom.}. This process yields the following Wheeler-DeWitt equation for the wavefunction of the universe  $\Psi(\bar{a}, T)$ \cite{nelson_peter_bouncing_original}
+        %
+        \begin{equation}
                 \label{wdweq}
-            i\frac{\partial}{\partial T}\Psi(q,T) = \frac{1}{4}\frac{\partial^{2}}{\partial q^{2}}\Psi(q,T),
+            N\dcol{ i\frac{\partial}{\partial T}\Psi(q,T) - \frac{1}{4}\frac{\partial^{2}}{\partial q^{2}}\Psi(q,T) } = 0 ,
         \end{equation}
-       such that a specific operator factor ordering was chosen to preserve the symmetries of the classical system \cite{halliwell1990introductory} . Also we introduced the change of variable
+        %
+        such that a specific operator factor ordering was chosen to preserve the symmetries of the classical system \cite{halliwell1990introductory} . Also we introduced the change of variable
         \begin{equation}
             q \equiv \frac{2\bar{a}^{\frac{3}{2}\dpar{1-w} } }{ 3\dpar{1-w } }
         .\end{equation}
-        
+        %
+        Note that the right hand side of side of said equation always  vanishes due to the classical Hamiltonian constraint ${\cal H}=0$. Therefore, if one tries to interpret the right hand it as a usual Schrödinger equation with $\propto \partial \Psi / \partial T$ where $T$ is a time parameter, one sees that the wavefunction does not evolve on time, which is the well known Problem of Time in Quantum Gravity.
+
+        A possible way to evolve the quantum state is to consider an internal time parameter. First, note that the operator $\hat{\Pi}_T$ appears linearly in the Hamiltonian, and the classical equation of motion of its conjugate variable is given by
+        $\dot{T} = { N }/{ \bar{a}^{3w} }$, implying $\dot{T} > 0$ and making $T$ a monotonic function of classical time. Hence, $T$ can be used as a time variable, allowing us to write a Schrödinger-like equation by using our freedom to choose the lapse function as $N = \bar{a}^{3w} \implies \dot{T} = 1$. For the details, see Ref.~\cite{fluidgeral}. We then obtain
+        %
+                \begin{equation}
+                \label{wdweq}
+            i\frac{\partial}{\partial T}\Psi(q,T) = \frac{1}{4}\frac{\partial^{2}}{\partial q^{2}}\Psi(q,T),
+        \end{equation} }
+       
 Eq.~\eqref{wdweq} resembles a time-reversed free particle Schrödinger equation and, with appropriate boundary conditions, its solutions are wavefunctions of the scale factor $\bar{a}(T)$. We turn to the De Broglie-Bohm interpretation~\cite{mukhanov2005physical,nelson2000bohm}, such that assuming a Gaussian wavefunction $\Psi(\bar{a},T)$, the Bohmian trajectory solution reads
 \begin{equation}
 \label{bohm_scale_factor}
             \bar{a}(T) = \bar{a}_{B}\dcol{1 + \dpar{ \frac{T}{T_{ B}} }^2 }^{{\frac{1}{3}\frac{1}{\dpar{1-w}} } }  ,
         \end{equation}
-        where $\bar{a}_{B}$ is an integration constant that represents the minimum scale factor value and $T_B$ is a small arbitrary constant related to the time scale of the bounce.  \textcolor{red}{Note that our model goes from $T=-\infty$ in the far past untill $T=0$ at the bounce such that we obtain a minimal scale factor at the bounce.} Remarkably, $\bar{a}(t) \neq 0$ for all $t$, which means that this model is non-singular and represents an eternal universe~\cite{nelson_peter_bouncing_original}. For a detailed derivation, see \cite{nelson2021bouncing}.
+        where $\bar{a}_{B}$ is an integration constant that represents the minimum scale factor value and $T_B$ is a small arbitrary constant related to the time scale of the bounce.  \textcolor{red}{Note that our model goes from $T=-\infty$ in the far past untill $T=0$ at the bounce such that we obtain a minimal scale factor at the bounce.} Remarkably, $\bar{a}(T) \neq 0$ for all $T$, which means that this model is non-singular and represents an eternal universe~\cite{nelson_peter_bouncing_original}. For a detailed derivation, see \cite{nelson2021bouncing}.
 
         Given that we focus solely on a contracting universe model filled with dust, we set $w \approx 0$, simplifying the time variable $T$ to the conventional cosmic time $t$. With the scale factor obtained in Eq.~\eqref{bohm_scale_factor}, we derive its associated Hubble function
         \begin{equation}\label{bohm_hubble}
@@ -214,7 +225,7 @@ Eq.~\eqref{wdweq} resembles a time-reversed free particle Schrödinger equation 
          c\dot{\bar{H}} = - \frac{\kappa c^{2}}{2} \bar\rho + 3\bar{H}^{2}_{0}\Omega_{q0}\bar{a}^{-6}    
         .\end{align}
         }
- In the above equations, there is an additional term $- \bar{H}^{2}_{0}\Omega_{q0}\bar{a}^{-6}$ when compared to the usual Friedmann equation for a classical universe. In our model, the scale factor dynamics mirrors a typical Friedmann equation with a total energy density $\rho_{T} = \bar\rho_{d} + \rho_{q}$, where $\rho_{d}$ represents the dust energy density and $\rho_{q} = -\Omega\rho_{c}\bar{a}^{-6}$ denotes an effective negative energy density accounting for quantum effects that circumvent the primordial singularity~\cite{vitenti2012large}. For large-scale factors $\bar{a} \gg \bar{a}_{b} $, Eq.~\eqref{effective_friedmann} and Eq.~\eqref{bohm_scale_factor} reduce to the classical dust dominated flat FLRW universe.
+ In the above equations, there is an additional term $- \bar{H}^{2}_{0}\Omega_{q0}\bar{a}^{-6}$ when compared to the usual Friedmann equation for a classical universe. In our model, the scale factor dynamics mirrors a typical Friedmann equation with a total energy density $\rho_{T} = \bar\rho_{d} + \rho_{q}$, where {\color{red}$\rho_{d}$ represents the dust energy density and $\rho_{q} = -\Omega\rho_{c}\bar{a}^{-6}$ denotes an effective negative energy density accounting for quantum effects that circumvent the primordial singularity}~\cite{vitenti2012large}. For large-scale factors $\bar{a} \gg \bar{a}_{b} $, Eq.~\eqref{effective_friedmann} and Eq.~\eqref{bohm_scale_factor} reduce to the classical dust dominated flat FLRW universe.
         \textcolor{red}{For instance, let us compute the time for which the quantum contribution is 10\% of the classical one. That means, from Eqs.~\eqref{friedman_scale} and \eqref{bohm_scale_factor} , that $\bar{a} = 0.1 a_b$ and $1 + \left(\frac{T}{T_B}\right)^2 = 1000$ for dust. In our dimensionless units, defined in Eq.~\eqref{tauparameter}, this would result in a time $\tau_a \approx -4.16$, which is extremely close to the bouncing point and it is not relevant for our analysis. Thus, effectively we still have a classical behavior with an energy density following the scale factor from the Bohm trajectory, and the quantum corrections only become relevant when $t \approx t_b$.}
          With this, we conclude the analysis of our background quantum bouncing model and move to its associated perturbations. In the next sections, we will consider the above quantum bouncing model with $w\approx 10^{-10}$ and $x_b = 10^{35}$ and we solve the equations numerically without any approximation.
         
@@ -343,7 +354,7 @@ Before solving this system numerically, we need to discuss the quantized version
 \subsection{Quantization}
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-In this model, the background is characterized by a quantum contracting phase where an effective quantum fluid dominates near the bounce. Consequently, we seek quantized perturbations for consistency, although both theories can be viewed independently. In particular, the use of quantized perturbations evolving on classical backgrounds has been widely used since the results of Mukhanov and Chibisov \cite{mukhanov1981quantum} and Hawking \cite{hawking1982quantum_fluctuations} to derive the power spectrum of primordial perturbations, which are in turn used to describe the formation of structure on our universe.
+In this model, the background is characterized by a quantum contracting phase where an effective quantum fluid dominates near the bounce. Consequently, we seek quantized perturbations for consistency, although both theories can be viewed independently. {\color{red} Since we are considering the De Broglie-Bohm interpretation for the background, quantum effects are described in terms of the effective classical scale factor  \eqref{bohm_scale_factor}, so that we may treat quantum perturbations evolving on said classical scale factor \cite{Vitenti2013}}. In particular, the use of quantized perturbations evolving on classical backgrounds has been widely used since the results of Mukhanov and Chibisov \cite{mukhanov1981quantum} and Hawking \cite{hawking1982quantum_fluctuations} to derive the power spectrum of primordial perturbations, which are in turn used to describe the formation of structure on our universe.
 
 The use of quantum fields to describe primordial perturbations means that said fields will have statistical properties. We may then partition the universe into local spatial regions and consider each one as a realization of a random process and compare its statistical properties with our theoretical predictions.\footnote{Here, an important remark must be made: in inflationary models, one usually postulates this quantum to classical statistical connection, but the specific mechanism that converts a quantum universe to a classical one is still an open problem \cite{nelson2021bouncing,mukhanov2005physical}. In our model, even if the perturbative level predictions do not depend strongly on the bouncing mechanism if one assumes the De Broglie-Bohm interpretation applied to Canonical Quantum Gravity, this problem is automatically solved \cite{nelson_bohm2023}. }
 
