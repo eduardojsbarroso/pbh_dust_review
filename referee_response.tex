@@ -22,52 +22,116 @@
 \usepackage[hmarginratio=1:1]{geometry}
 
 \begin{document}
-We appreciate the interest in our paper and thank you for the time taken to review it. Regarding the points suggested, here are our thoughts on the matter:
+
+We appreciate the referee’s careful review of our manuscript and the insightful feedback
+provided. Below, we provide detailed responses to each point and explain the
+corresponding changes made to the manuscript where applicable:
 
 \begin{enumerate}
-    \item 
+    \item
+          \begin{enumerate}
+              \item  To obtain the matter Lagrangian for this model, we use the Schutz
+                    formalism, following Ref.~\cite{fluidgeral}. In this framework, the
+                    Lagrangian corresponds to the fluid pressure, which depends on the
+                    specific entropy and enthalpy. A detailed discussion of this
+                    approach is provided in the cited reference. For clarity, we rewrote
+                    the description of the Schutz formalism in Section 2.2 and ensured
+                    that the references are correctly cited.
 
-    \begin{enumerate}
-        \item  To obtain the matter Lagrangian for this model, we employ the Schutz formalism. It assumes that the fluid's velocity can be expressed in terms of potentials of scalar fields, and the fluid's enthalpy is determined by the magnitude of the velocity. This allows us to write the Lagrangian as a functional of these fields. A detailed application of this formalism can be found in Ref.~\cite{fluidgeral}. We have included a brief description of this approach in Section 2.2 and corrected the cited references.
+              \item Indeed, if the sound speed were to approach zero, we would encounter
+                    a divergence problem. This is why we limit ourselves to small but
+                    non-zero equations of state for dust, which is in agreement with the
+                    literature. Regarding the $\zeta$ field, there are always field
+                    configurations that would lead to non-perturbative behavior.
+                    However, in the present context, given the initial conditions in
+                    equation 3.32, we are considering the adiabatic vacuum for which
+                    $\zeta \propto 1/\sqrt{z^2c_s} \propto \sqrt{c_s}$. Therefore, terms
+                    of the form $z^2c_s^2\zeta^2$ are $\propto c_s$ while $\zeta^3
+                        \propto \sqrt{c_s}^3$ This means that the perturbative expansion is valid
+                    for small sound speeds, as discussed in
+                    Ref.~\cite{vitenti2012large}.
 
-        \item Indeed, if the sound speed were to approach zero, we would encounter a divergence problem. This is why we limit ourselves to small but non-zero equations of state for dust, which is in agreement with the literature. Regarding the $\zeta$ field, we can observe from the initial conditions in equation 3.32, along with the definitions of 
-        z and the frequency, that the modes for $\zeta$ will evolve proportionally to 
-        $\frac{1}{\sqrt{m \omega_k}} \propto c_s$, meaning that higher-order perturbative terms would evolve similarly.
+                    We have reorganized Sections 4.3 and 4.4 and considered a very
+                    small, but non-zero, equation of state for dark matter to analyze
+                    the pressureless case.
+          \end{enumerate}
 
-        In \cite{vitenti}, the authors demonstrate that the first-order terms in the perturbative expansion are indeed smaller than the zero-order terms. To replicate this for higher-order terms, we would need to prove that all third-order terms are smaller than second-order terms in a general manner. Simply comparing one term in the expansion, such as $\zeta^3$ to $\zeta^2$, does not imply that all second-order terms in the Lagrangian are less significant than third-order terms. This kind of proof has not yet been addressed in the literature and is beyond the scope of this paper.
+    \item
 
-        We have reorganized Sections 4.3 and 4.4 and considered a very small, but non-zero, equation of state for dark matter to analyze the pressureless case.
-        
-    \end{enumerate}
+          \begin{enumerate}
+              \item We improved Sec.~2.2 by adding a more detailed explanation of the
+                    Schutz formalism and the fluid Lagrangian. We also included a
+                    discussion of the lapse function and how it can be defined a
+                    posteriori for simplicity.
 
-    \item 
+              \item In the improved Sec.~2.2, we have added a brief discussion of the
+                    meaning of the effective energy density and pressure in the context
+                    of the quantum corrections. In Ref.~\cite{fluidgeral}, the authors
+                    show that the energy density and pressure appearing in the perturbed
+                    equations are only the classical one computed with the Bohmian
+                    trajectory. Therefore, the equation-of-state parameter is always
+                    $w=p_d/\rho_d$.
 
-    \begin{enumerate}
-        \item Our presentation of the Wheeler-De Witt equation and choice of internal time was too direct and incomplete, as pointed out by the referee. We then added an intermediary step for which one considers the general Wheeler-De Witt equation without a choice of time parameter, so that we only consider $N = a^{3w}$ after identifying a suitable internal time on the Wheeler-De Witt equation.
+              \item In the revised Sec.~2.2, we have included the effective equation
+                    corresponding to the second Friedmann equation, now presented as Eq. 2.17:
+                    $-2\dot{\bar{H}} = \bar{\rho}(1+w) - 2\rho_q.$
+                    Notably, the right-hand side of this equation approaches zero around the
+                    bounce. However, as discussed previously in Ref.~\cite{fluidgeral} it
+                    has been shown that the energy density and pressure in the second-order
+                    Lagrangian for the perturbations are only the classical components
+                    evaluated along the Bohmian trajectory. Consequently, this term is never
+                    zero, ensuring that the model is free from ghost instability issues.
+              \item In Ref.~33 the author chooses a particular form for the wave
+                    function at the bounce. This is indeed not a initial condition, but
+                    a choice made to simplify the analysis. The same wave-function
+                    propagated to $T\to-\infty$ would have an extra phase factor
+                    proportional to the $q^2$, exactly like a the wave function of a
+                    free Gaussian package in 1d. One can always start with a different
+                    wave function and define the bounce as the time where the phase
+                    factor proportional to $q^2$ is zero. Again, this is equivalent to a
+                    free Gaussian package in 1d. Thus, in short, has to start at a large
+                    but finite negative time, with a Gaussian wave-function containing a
+                    phase factor proportional to $q^2$. Then, the bounce is defined as
+                    the time where this phase factor is zero. We have included a brief
+                    discussion of this point in the revised manuscript.
+              \item In our approach, we use a perturbative method: the background is
+                    solved first, and the Bohmian trajectory is derived from the
+                    background wave function. Perturbations are then computed
+                    conditioned on this Bohmian trajectory. In practice, during the
+                    contraction phase, the significant part of the power spectrum is
+                    generated in the classical regime, effectively following a
+                    semi-classical approach. Quantum effects on the background become
+                    relevant only near the bounce, where the relevant modes are on
+                    super-Hubble scales. If the background is in a superposition of
+                    Gaussian states, the perturbations would naturally reflect this
+                    superposition. However, this aspect lies outside the scope of our
+                    work, as we are focused here on black hole formation during the
+                    contraction phase.
 
-        \item \textbf{SANDRO ADICIONAR} In our quantum model, we observe that there is a quantum contribution to the usual Friedmann equation. This contribution should not be interpreted as a new fluid but rather as an effective correction. Essentially, we use the classical fluid density with the scale factor following the Bohm trajectory.
+          \end{enumerate}
 
-        Moreover, if we compute the time in the universe when the quantum contribution reaches 10\% of the classical contribution, we find that this occurs only at scales very close to the bounce. At these timescales, the primordial black holes formed would have such small masses that they would evaporate quickly and thus would not affect our analysis. We restrict our study to times well before the bounce, where such quantum corrections are not significant. Therefore, we only consider $w_{matter}$ and not $w_{eff}$.
+    \item In general, when both the background and the perturbations are quantized it is necessary
+          to develop the second order Lagrangian for the perturbations without assuming the background
+          is classical. Once this is done, one can show that for particular choices of the wave-function
+          for the whole system (background plus perturbations) the perturbations can be treated as
+          quantum fields evolving around the Bohmian trajectory. We included a brief discussion of this
+          point in the revised manuscript, Sec.~3.3.
 
-        We have added the calculation of the times when the quantum contribution becomes 10\% of the classical one to the paper.
+    \item In Ref.~\cite{vitenti2012large}, it is shown that for a Friedmann background with
+          scalar perturbations, an appropriate gauge choice ensures the perturbative
+          series remains valid in the bounce model. Nevertheless, this only shows that
+          vacuum initial conditions around an initial Friedmann background are
+          consistent with the perturbative expansion. The referee is correct in pointing
+          out that the perturbative expansion may not be valid for more general initial
+          conditions. In our study, we focus on this simpler model, leaving the
+          exploration of a homogeneous and anisotropic background, specifically
+          Bianchi-I models, for future work. A brief discussion of this possibility has
+          been included in the conclusion.
 
-        \item At bouncing point, we have that \bar{H} = 0. However this means that the Eq. 2.16 will be zero, which englobes both the classical energy density plus the effective quantum contribution, which will be in fact relevant at this time. Thus, this condition does not imply that $\rho + p$ = 0 and the model does not suffer from ghost instability problems. We have added the calculation of the second Friedmann equation in section 2.2 . 
-
-        \item In Ref 33, it is given an initial wave function by Equation 44. However this is an initial condition set at the bounce. We see below Eq. 45 that the authors afirm: "Note that this solution has no singularities for whatever initial value of $a_b \neq 0$, and
-        tends to the classical solution when $T \rightarrow \pm T$." The initial condition set at the bounce assures that there are no singularities in the model.
-        
-        Moreover, our model starts with $T = -\infty$ so there is a contracting phase for the scale factor. We have explicitly defined the initial time in the paragraph below Eq. 2.12.
-
-        \item From our definitions, the time variable does not depend on a scalar field, it depends on the fluid's energy density, which is also perturbed. \textbf{SANDRO ADICIONAR}
-        
-    \end{enumerate}
-
-    \item As was well observed, our discussion regarding the quantum or classical behavior in 3.3 was not sound. Therefore, we added a comment pointing out that quantum effects are encapsulated on the classical effective scale factor (2.13), which allows one to treat perturbations as quantum and the background as classical in this effective formulation.
-
-    \item In Ref.~\cite{vitenti}, it is shown that for a Friedmann background with scalar perturbations, an appropriate gauge choice ensures the perturbative series remains valid in the bounce model. In our study, we focus on this model, leaving the exploration of a homogeneous and anisotropic background, specifically Bianchi-I models, for future work. A brief discussion of this possibility has been included in the conclusion.
-
-    \item In this work, $c$ is the speed of light, $\bar{\rho}$ is the matter energy density and $\delta\rho$ is the perturbation to the matter energy density. The aforementioned quantities were properly defined in the main text, along with other quantities that were used before their definitions. 
-    
+    \item To simplify the presentation, we set the speed of light $c=1$ in the main
+          text. We have now included a brief discussion of this choice in the revised
+          manuscript. We also clarified the definition energy density and perturbation
+          in the main text.
 \end{enumerate}
 
 \bibliographystyle{unsrt}
