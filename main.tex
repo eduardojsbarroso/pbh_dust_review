@@ -263,88 +263,87 @@ and discuss the solutions for this quantization procedure.
 
 \subsection{Wheeler-DeWitt Equation Solutions}
 
-{\color{red} We start by applying the aforementioned considerations to a flat,
-	homogeneous, and isotropic universe containing a single perfect fluid characterized by
-	its pressure $\bar{p}$ and energy density $\bar{\rho}$, along with the equation of state
-	$\bar{p} = w\bar{\rho}$, with a constant $w$. Subsequently, we specialize in the dust
-	case where $w \approx 0$. In practice, we consider a barotropic fluid with a constant
-	equation of state, following the Schutz formalism as described in
-	Ref.~\cite{fluidgeral}. In this section we will briefly review the quantization of the
-	flat-dust bouncing model, focusing on the background dynamics.
+We start by applying the aforementioned considerations to a flat, homogeneous, and
+isotropic universe containing a single perfect fluid characterized by its pressure
+$\bar{p}$ and energy density $\bar{\rho}$, along with the equation of state $\bar{p} =
+	w\bar{\rho}$, with a constant $w$. Subsequently, we specialize in the dust case where $w
+	\approx 0$. In practice, we consider a barotropic fluid with a constant equation of
+state, following the Schutz formalism as described in Ref.~\cite{fluidgeral}. In this
+section we will briefly review the quantization of the flat-dust bouncing model,
+focusing on the background dynamics.
 
-	To proceed with the quantization, we first derive the system's Hamiltonian
-	from its corresponding Lagrangian. The Lagrangian of the system is given by
-	\begin{align}\label{lagrangian}
-		L & = \int \dd^3x \sqrt{-\bar{g}} \left[\frac{\bar{R}}{2\kappa}
-			+ \bar{p}(\bar{v}, \bar{s})\right],
-	\end{align}
-	where, $\bar{g}$ denotes the determinant of the metric, $\bar{R}$ is the background
-	Ricci scalar, and $\kappa = \frac{8 \pi G}{c^4}$, where $c$ is the speed of
-	light and $G$ is the gravitational constant. We set $c = 1$ for simplicity. The
-	term $\bar{p}$ represents the fluid pressure, which is expressed as a function of
-	the specific enthalpy $\bar{v}$ and specific entropy $\bar{s}$.
+To proceed with the quantization, we first derive the system's Hamiltonian from its
+corresponding Lagrangian. The Lagrangian of the system is given by
+\begin{align}\label{lagrangian}
+	L & = \int \dd^3x \sqrt{-\bar{g}} \left[\frac{\bar{R}}{2\kappa}
+		+ \bar{p}(\bar{v}, \bar{s})\right],
+\end{align}
+where, $\bar{g}$ denotes the determinant of the metric, $\bar{R}$ is the background
+Ricci scalar, and $\kappa = \frac{8 \pi G}{c^4}$, where $c$ is the speed of light and
+$G$ is the gravitational constant. We set $c = 1$ for simplicity. The term $\bar{p}$
+represents the fluid pressure, which is expressed as a function of the specific enthalpy
+$\bar{v}$ and specific entropy $\bar{s}$.
 
-	Using the Schutz formalism, the enthalpy can be decomposed into scalar potentials:
-	\begin{align}
-		\bar{v}_\mu & = \bar\nabla_\mu \varphi_1
-		+ \varphi_2 \bar\nabla_\mu \varphi_3
-		+ \varphi_4 \bar\nabla_\mu \bar{s},
-		\quad \bar{v} \equiv \sqrt{-\bar{v}_\mu \bar{v}^\mu},
-	\end{align}
-	where $\varphi_i$ are four independent scalar potentials. Varying the Lagrangian with
-	respect to these potentials and the specific entropy yields all thermodynamic relations,
-	including the perfect fluid energy-momentum tensor, entropy conservation, and particle
-	number conservation.
+Using the Schutz formalism, the enthalpy can be decomposed into scalar potentials:
+\begin{align}
+	\bar{v}_\mu & = \bar\nabla_\mu \varphi_1
+	+ \varphi_2 \bar\nabla_\mu \varphi_3
+	+ \varphi_4 \bar\nabla_\mu \bar{s},
+	\quad \bar{v} \equiv \sqrt{-\bar{v}_\mu \bar{v}^\mu},
+\end{align}
+where $\varphi_i$ are four independent scalar potentials. Varying the Lagrangian with
+respect to these potentials and the specific entropy yields all thermodynamic relations,
+including the perfect fluid energy-momentum tensor, entropy conservation, and particle
+number conservation.
 
-	Since we assume a barotropic fluid with a constant equation of state $\bar{p} = w
-		\bar{\rho}$, it follows that $\partial \bar{p} / \partial \bar{s} \vert_{\bar{\rho}} =
-		0$, where $\bar{\rho}$ is the energy density. This assumption simplifies the pressure to
-	the form $\bar{p} = f(\bar{s}) \bar{v}^{(1+w)/w}$.
+Since we assume a barotropic fluid with a constant equation of state $\bar{p} = w
+	\bar{\rho}$, it follows that $\partial \bar{p} / \partial \bar{s} \vert_{\bar{\rho}}
+	= 0$, where $\bar{\rho}$ is the energy density. This assumption simplifies the
+pressure to the form $\bar{p} = f(\bar{s}) \bar{v}^{(1+w)/w}$.
 
-	After performing a Legendre transformation and solving the constraints, the Lagrangian
-	simplifies to:
-	\begin{align}
-		L          & = \Pi_a \dot{\bar{a}} + \Pi_{\varphi_1} \dot{\varphi}_1 +
-		N \left( \frac{\kappa \Pi_a^2}{12 V \bar{a}} - V \bar{a}^3 \bar{\rho} \right), \\
-		\Pi_a      & = -\frac{6 V \bar{a} \dot{\bar{a}}}{N \kappa}, \qquad
-		\Pi_{\varphi_1} = V \bar{a}^3 f \frac{1+w}{w}\bar{v}^{1/w},                    \\
-		\bar{\rho} & = \frac{f}{w\bar{a}^{3(1+w)}} \left( \frac{w}{1+w}
-		\frac{1}{Vf} \right)^{1+w}\Pi_{\varphi_1}^{1+w},
-	\end{align}
-	where $V$ is the conformal volume. Since the fluid term has the form
-	$\Pi_{\varphi_1}^{1+w}$ and the momentum term for the scale factor includes a factor
-	dependent on $\bar{a}$, we introduce a final canonical transformation to define new
-	momenta, $\Pi_q$ and $\Pi_T$
-	\begin{align}
-		\Pi_q & = \Pi_{\bar{a}} \bar{a}^{(-1+3w)/2},                                                 \\
-		\Pi_T & = \frac{V f}{w} \left( \frac{w}{1+w} \frac{1}{Vf}\right)^{1+w} \Pi_{\varphi_1}^{1+w}
-	\end{align}.
+After performing a Legendre transformation and solving the constraints, the Lagrangian
+simplifies to:
+\begin{align}
+	L          & = \Pi_a \dot{\bar{a}} + \Pi_{\varphi_1} \dot{\varphi}_1 +
+	N \left( \frac{\kappa \Pi_a^2}{12 V \bar{a}} - V \bar{a}^3 \bar{\rho} \right), \\
+	\Pi_a      & = -\frac{6 V \bar{a} \dot{\bar{a}}}{N \kappa}, \qquad
+	\Pi_{\varphi_1} = V \bar{a}^3 f \frac{1+w}{w}\bar{v}^{1/w},                    \\
+	\bar{\rho} & = \frac{f}{w\bar{a}^{3(1+w)}} \left( \frac{w}{1+w}
+	\frac{1}{Vf} \right)^{1+w}\Pi_{\varphi_1}^{1+w},
+\end{align}
+where $V$ is the conformal volume. Since the fluid term has the form
+$\Pi_{\varphi_1}^{1+w}$ and the momentum term for the scale factor includes a factor
+dependent on $\bar{a}$, we introduce a final canonical transformation to define new
+momenta, $\Pi_q$ and $\Pi_T$
+\begin{align}
+	\Pi_q & = \Pi_{\bar{a}} \bar{a}^{(-1+3w)/2},                                                 \\
+	\Pi_T & = \frac{V f}{w} \left( \frac{w}{1+w} \frac{1}{Vf}\right)^{1+w} \Pi_{\varphi_1}^{1+w}
+\end{align}.
 
-	In the above framework, the total Hamiltonian takes the form
-	\begin{align}
-		\label{total_hamiltonian_FLRW}
-		{\cal H} & = \frac{N}{\bar{a}^{3w}}\dpar{\Pi_{T}- \frac{\kappa\Pi_q^{2} }{12}} ,
-	\end{align}
-	Canonical quantization is then performed by promoting classical variables to operators
-	satisfying the canonical commutation relations. This process yields the following
-	Wheeler-DeWitt equation for the wave-function of the universe  $\Psi(\bar{a}, T)$
-	(see Ref.~\cite{nelson_peter_bouncing_original}):
-	\begin{equation}
-		\label{wdweq}
-		i\hbar\frac{\partial}{\partial T}\Psi(q,T) -
-		\frac{\kappa\hbar^2}{12}\frac{\partial^{2}}{\partial q^{2}}\Psi(q,T)  = 0 ,
-	\end{equation}
-	such that a specific operator factor ordering was chosen to preserve the symmetries of
-	the classical system \cite{halliwell1990introductory}. Also, note that our last
-	canonical transformation leads to the following variable
-	\begin{equation}
-		q = \frac{2\bar{a}^{\frac{3}{2}\dpar{1-w} } }{ 3\dpar{1-w } }.
-	\end{equation}
-	In the WdW equation above, we circumvent the problem of time by interpreting the
-	parameter $T$ as an intrinsic time variable that is monotonically related to the
-	classical cosmic time in the classical limit. This allows us to interpret the equation
-	as a Schrödinger-like equation.
-}
+In the above framework, the total Hamiltonian takes the form
+\begin{align}
+	\label{total_hamiltonian_FLRW}
+	{\cal H} & = \frac{N}{\bar{a}^{3w}}\dpar{\Pi_{T}- \frac{\kappa\Pi_q^{2} }{12}} ,
+\end{align}
+Canonical quantization is then performed by promoting classical variables to operators
+satisfying the canonical commutation relations. This process yields the following
+Wheeler-DeWitt equation for the wave-function of the universe  $\Psi(\bar{a}, T)$ (see
+Ref.~\cite{nelson_peter_bouncing_original}):
+\begin{equation}
+	\label{wdweq}
+	i\hbar\frac{\partial}{\partial T}\Psi(q,T) -
+	\frac{\kappa\hbar^2}{12}\frac{\partial^{2}}{\partial q^{2}}\Psi(q,T)  = 0 ,
+\end{equation}
+such that a specific operator factor ordering was chosen to preserve the symmetries of
+the classical system \cite{halliwell1990introductory}. Also, note that our last
+canonical transformation leads to the following variable
+\begin{equation}
+	q = \frac{2\bar{a}^{\frac{3}{2}\dpar{1-w} } }{ 3\dpar{1-w } }.
+\end{equation}
+In the WdW equation above, we circumvent the problem of time by interpreting the
+parameter $T$ as an intrinsic time variable that is monotonically related to the
+classical cosmic time in the classical limit. This allows us to interpret the equation
+as a Schrödinger-like equation.
 
 Equation~\eqref{wdweq} resembles a time-reversed free particle Schrödinger equation and,
 with appropriate boundary conditions, its solutions are wave functions of the scale
@@ -358,25 +357,24 @@ factor reads
 \end{equation}
 where $\bar{a}_{B}$ is an integration constant that represents the minimum scale factor
 value and $T_B$ is a small arbitrary constant related to the time scale of the bounce.
-	{\color{red} To simplify the analysis, we choose the lapse function $N = \bar{a}^{3w}$,
-		but this choice is only possible after solving the Bohmian trajectory. The reason is
-		that, initially, we cannot select $N$ as an operator function of the scale factor,
-		However, once we have the Bohmian trajectory $\bar{a}(T)$, we can make this choice,
-		using it purely for convenience in the analysis. In our model, $T$ extends from $T =
-			-\infty$ in the far past to $T = 0$ at the bounce, where the scale factor $\bar{a}$
-		reaches its minimum. } Remarkably, $\bar{a}(T) \neq 0$ for all $T$, which means that
-this model is non-singular and represents an eternal
-universe~\cite{nelson_peter_bouncing_original}. For a detailed derivation, see
-\cite{nelson2021bouncing}.
+To simplify the analysis, we choose the lapse function $N = \bar{a}^{3w}$, but this
+choice is only possible after solving the Bohmian trajectory. The reason is that,
+initially, we cannot select $N$ as an operator function of the scale factor, However,
+once we have the Bohmian trajectory $\bar{a}(T)$, we can make this choice, using it
+purely for convenience in the analysis. In our model, $T$ extends from $T = -\infty$ in
+the far past to $T = 0$ at the bounce, where the scale factor $\bar{a}$ reaches its
+minimum. Remarkably, $\bar{a}(T) \neq 0$ for all $T$, which means that this model is
+non-singular and represents an eternal universe~\cite{nelson_peter_bouncing_original}.
+For a detailed derivation, see~\cite{nelson2021bouncing}.
 
-{\color{red} It is important to clarify that in Ref.~\cite{nelson2021bouncing}, the
-author selects a Gaussian wave function for the scale factor at the bounce. However,
-this does not imply that this choice is the initial condition for our model. Generally,
-a Gaussian wave packet of a one-dimensional free particle will develop a time-dependent
-phase proportional to $q^2$. Thus, it is always possible to begin with a Gaussian wave
+It is important to clarify that in Ref.~\cite{nelson2021bouncing}, the author selects a
+Gaussian wave function for the scale factor at the bounce. However, this does not imply
+that this choice is the initial condition for our model. Generally, a Gaussian wave
+packet of a one-dimensional free particle will develop a time-dependent phase
+proportional to $q^2$. Thus, it is always possible to begin with a Gaussian wave
 function at any time and define the bounce as the moment when this phase factor is zero.
 For instance, in Ref.~\cite{Peter2016a}, the authors choose a Gaussian wave function at
-any time and fix the phase using $H_0$. }
+any time and fix the phase using $H_0$.
 
 Given that we focus solely on a contracting universe model filled with dust, we set $w
 	\approx 0$, simplifying the time variable $T$ to the conventional cosmic time $t$. With
@@ -400,31 +398,32 @@ which is equivalent to the Friedmann equations
 \begin{equation}\label{effective_friedmann}
 	\bar{H}^{2} = \frac{\kappa}{ 3 }\bar\rho - \bar{H}^{2}_{0}\Omega_{q0}\bar{a}^{-6},
 \end{equation}
-where $\bar\rho$ is the dust energy density. {\color{red} Also, from the derivative of
-		Eq.~\eqref{friedman_scale},
-		\begin{align}
-			\dot{\bar{H}} = - \frac{\kappa}{2} \bar\rho + 3\bar{H}^{2}_{0}\Omega_{q0}\bar{a}^{-6}.
-		\end{align}
-	}
+where $\bar\rho$ is the dust energy density. Also, from the derivative of
+Eq.~\eqref{friedman_scale},
+\begin{align}
+	\dot{\bar{H}} = - \frac{\kappa}{2} \bar\rho + 3\bar{H}^{2}_{0}\Omega_{q0}\bar{a}^{-6}.
+\end{align}
 
-In the above equations, {\color{red} the overdot represents the time derivative and} there is an additional term
+
+In the above equations, the overdot represents the time derivative and there is an additional term
 $-\bar{H}^{2}_{0}\Omega_{q0}\bar{a}^{-6}$ when compared to the usual Friedmann equation
-for a classical universe. {\color{red} In our model, the scale factor dynamics resemble
-		a typical Friedmann equation with a total energy density $\rho_{T} = \bar{\rho} +
-			\rho_{q},$ where $\bar{\rho}$ is the dust energy density, and $\rho_{q} = -\Omega
-			\rho_{c} \bar{a}^{-6}$ denotes an effective negative energy density with an equation of
-		state $w_q = 1$ that accounts for quantum effects to avoid the primordial
-		singularity~\cite{vitenti2012large}. It is important to note that $\rho_{q}$ is not a
-		physical energy density but rather an effective one that emerges from the Bohmian trajectory. In
-		the perturbative analysis, the energy density will always be associated only with
-		$\bar{\rho}$. For large-scale factors $\bar{a} \gg \bar{a}_{B} $,
-		Eq.~\eqref{effective_friedmann} and Eq.~\eqref{bohm_scale_factor} reduce to the
-		classical dust dominated a flat FLRW universe. With this, we conclude the analysis of our
-		background quantum bouncing model and move to its associated perturbations. In the next
-		sections, we will consider the above quantum bouncing model with $w\approx 10^{-10}$ and
-		$\bar{a}(t_0)/a_B = 10^{35}$ where $t_0$ is the time during the contracting phase where
-		$H(t_0) = -H_0$ for $H_0 = 70 \, \text{km/s/Mpc}$. Moreover, when solving the equations
-		numerically, we use the exact expressions in terms of $w$ without approximation.}
+for a classical universe. In our model, the scale factor dynamics resemble
+a typical Friedmann equation with a total energy density $\rho_{T} = \bar{\rho} +
+	\rho_{q},$ where $\bar{\rho}$ is the dust energy density, and $\rho_{q} = -\Omega
+	\rho_{c} \bar{a}^{-6}$ denotes an effective negative energy density with an equation of
+state $w_q = 1$ that accounts for quantum effects to avoid the primordial
+singularity~\cite{vitenti2012large}. It is important to note that $\rho_{q}$ is not a
+physical energy density but rather an effective one that emerges from the Bohmian
+trajectory. In the perturbative analysis, the energy density will always be associated
+only with $\bar{\rho}$. For large-scale factors $\bar{a} \gg \bar{a}_{B} $,
+Eq.~\eqref{effective_friedmann} and Eq.~\eqref{bohm_scale_factor} reduce to the
+classical dust dominated a flat FLRW universe. With this, we conclude the analysis of
+our background quantum bouncing model and move to its associated perturbations. In the
+next sections, we will consider the above quantum bouncing model with $w\approx
+	10^{-10}$ and $\bar{a}(t_0)/a_B = 10^{35}$ where $t_0$ is the time during the
+contracting phase where $H(t_0) = -H_0$ for $H_0 = 70 \, \text{km/s/Mpc}$. Moreover,
+when solving the equations numerically, we use the exact expressions in terms of $w$
+without approximation.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -448,14 +447,13 @@ that we will assume to be much smaller than one \cite{vitenti2012large}. Also,
 $\bar{D}_i$ is the spatial covariant derivative in the $i$-th direction. Note that our
 barotropic fluid has no anisotropic pressure.
 
-	{\color{red} In the perturbative treatment, we continue to use the Schutz formalism
-		and construct the Lagrangian as in Eq.~\eqref{lagrangian}, but now incorporating the
-		perturbed metric. The perturbed Lagrangian and associated variables are defined as
-		in Ref.~\cite{Vitenti2012}. Note that in the perturbed Lagrangian, the perturbations
-		are always linked to the physical quantities and their corresponding background
-		values. The effective energy density and pressure do not fluctuate; instead, the
-		quantum effects from the background are incorporated through the use of the
-		background Bohmian trajectories.}
+In the perturbative treatment, we continue to use the Schutz formalism and construct the
+Lagrangian as in Eq.~\eqref{lagrangian}, but now incorporating the perturbed metric. The
+perturbed Lagrangian and associated variables are defined as in Ref.~\cite{Vitenti2012}.
+Note that in the perturbed Lagrangian, the perturbations are always linked to the
+physical quantities and their corresponding background values. The effective energy
+density and pressure do not fluctuate; instead, the quantum effects from the background
+are incorporated through the use of the background Bohmian trajectories.
 
 The metric perturbations are gauge-dependent variables. In cosmology, a gauge can be
 seen as the freedom in how we connect, or map, the background and physical manifold, and
@@ -524,11 +522,12 @@ following relations~\cite{Mukhanov1992, Vitenti2013}
 	\label{phiz}
 	\bar{D}^{2} \Phi                                        & =  - \frac{z^2\bar{H}}{\bar{a}^3} \dot{\zeta} = -\frac{\bar{H}}{2\bar{a}^3} \Pi_\zeta
 	.\end{align}
-\textcolor{red}{In the above, $c^{2}_s=\dpar{ \frac{\partial\bar{\rho}}{\partial\bar{p}} }_{S}= w$ is the speed of sound, $\Pi_\zeta$ is the conjugated momenta related to $\zeta$ and
-	\begin{align}
-		\label{zdef}
-		z^2=\frac{\kappa \bar{a}^3 (\bar{\rho} + \bar{p})}{2\bar{H}^2 c_{s}^2}
-		.\end{align}}
+In the above, $c^{2}_s=\dpar{ \frac{\partial\bar{\rho}}{\partial\bar{p}} }_{S}= w$ is
+the speed of sound, $\Pi_\zeta$ is the conjugated momenta related to $\zeta$ and
+\begin{align}
+	\label{zdef}
+	z^2=\frac{\kappa \bar{a}^3 (\bar{\rho} + \bar{p})}{2\bar{H}^2 c_{s}^2}.
+\end{align}
 For completeness, we also write the relation between the curvature perturbation and the
 usual Mukhanov-Sasaki variable $v$, that is,
 \begin{align}
@@ -598,17 +597,17 @@ particular, the use of quantized perturbations evolving on classical backgrounds
 been widely used since the results of Mukhanov and Chibisov \cite{mukhanov1981quantum}
 and Hawking \cite{hawking1982quantum_fluctuations} to derive the power spectrum of
 primordial perturbations, which are in turn used to describe the formation of structure
-in our universe. {\color{red} In our model, we quantize both the background and the
-		perturbations. Since we adopt the De Broglie-Bohm interpretation for the background,
-		quantum effects are described in terms of the Bohmian scale factor, as shown in
-		Eq.~\eqref{bohm_scale_factor}. This allows us to treat quantum perturbations evolving on
-		this scale factor. To demonstrate the consistency of this approach,
-		Ref.~\cite{Peter2005} derived the second-order Lagrangian for tensor perturbations
-		without assuming classical equations of motion for the background. Furthermore, by using
-		a factorized wave function for the perturbations and the background, the authors showed
-		that these perturbations evolve conditioned on the Bohmian scale factor. In
-		\cite{Vitenti2013}, the equivalent Lagrangian for scalar fluid perturbations was
-		derived and is the one we use in this work.}
+in our universe. In our model, we quantize both the background and the
+perturbations. Since we adopt the De Broglie-Bohm interpretation for the background,
+quantum effects are described in terms of the Bohmian scale factor, as shown in
+Eq.~\eqref{bohm_scale_factor}. This allows us to treat quantum perturbations evolving on
+this scale factor. To demonstrate the consistency of this approach,
+Ref.~\cite{Peter2005} derived the second-order Lagrangian for tensor perturbations
+without assuming classical equations of motion for the background. Furthermore, by using
+a factorized wave function for the perturbations and the background, the authors showed
+that these perturbations evolve conditioned on the Bohmian scale factor. In
+\cite{Vitenti2013}, the equivalent Lagrangian for scalar fluid perturbations was
+derived and is the one we use in this work.
 
 The use of quantum fields to describe primordial perturbations means that said fields
 will have statistical properties. We may then partition the universe into local spatial
@@ -687,9 +686,9 @@ creation operator $\hat{a}^{\dagger}_{k}$ and their linear combinations
 \cite{mukhanov2007introduction}. Now that we have defined the appropriate initial
 conditions for quantization, we may use them to solve the equations of motion in
 Eq.~\eqref{eomosc} and obtain the mode functions, which we shall do numerically.
-	{\color{red} Finally, it is important to note that the adiabatic vacuum prescription is
-		consistent with the perturbative analysis of the model, as it leads to small
-		perturbations as discussed in Ref.~\cite{vitenti2012large}.}
+Finally, it is important to note that the adiabatic vacuum prescription is consistent
+with the perturbative analysis of the model, as it leads to small perturbations as
+discussed in Ref.~\cite{vitenti2012large}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -958,7 +957,15 @@ In this context, let us now analyze Eq.~\eqref{deltacfinal} for the super-Jeans/
 \end{figure}
 \newpage
 \subsection{$\bar{p} = w \bar{\rho}, \quad w \ll 1$}
-\textcolor{red}{We want to analyze what would happen if the dark matter had such a small equation of state that could be thought as a presureless fluid.} In this case, Eq.~\eqref{deltacf} tells us that, for every scale $k$, we can always find a sufficient time in the past such that $x_{ini} \ll 1$, leading to the collapse of all density perturbations. In other words, if the universe is old enough, all perturbations will eventually collapse into a black hole until the universe reaches the bounce. If there was no bounce, the universe would completely collapse into black holes and our model would be highly unstable.
+
+We want to analyze what would happen if the dark matter had such a small equation of
+state that could be thought as a presureless fluid. In this case, Eq.~\eqref{deltacf}
+tells us that, for every scale $k$, we can always find a sufficient time in the past
+such that $x_{ini} \ll 1$, leading to the collapse of all density perturbations. In
+other words, if the universe is old enough, all perturbations will eventually collapse
+into a black hole until the universe reaches the bounce. If there was no bounce, the
+universe would completely collapse into black holes and our model would be highly
+unstable.
 
 It is indeed expected that a fluid with no pressure leads to a total collapse since no forces are opposing the collapse and dust only interacts via gravity. Thus all dark matter that we see today would indeed be contained in primordial black holes. However, this hypothesis was already refuted by some works by constraining the PBH abundance in dark matter based on observational effects (see Refs.~\cite{Villanueva2021, Carr2021}). Hence we must consider a dust fluid with a non-vanishing equation of state.
 \subsection{Filtered Variance}
@@ -1083,22 +1090,22 @@ We have seen in Eq.~\eqref{jeanslimit} that the time interval for which the pert
 
 Another approach for dark matter would be to consider a non-zero temperature. In Ref~\cite{Armendariz2014} dark matter is treated as a non-relativistic gas and, even for cases where $w\ll1$, the non-vanishing temperature would erase structure formation for scales smaller than the corresponding free-streaming length, which once again would contribute to decrease PBH formation in this model. If we treat DM as a relativistic gas, its temperature grows with $\Bar{a}^{-2}$~\cite{Mukhanov1992}. Thus, its temperature and pressure would diverge close to the bounce and prevent the collapse and PBH formation. We conclude that the formation of PBHs in the flat-dust bounce in observable scales is improbable as the analysis is robust against the formation on larger scales, leading to an insignificant fraction of PBHs as DM today.
 
-\textcolor{red}{In this work, we have investigated the formation of primordial black
-	holes within a Friedmann background, incorporating scalar perturbations. An alternative
-	approach would be to explore PBH formation in a homogeneous yet anisotropic background.
-	The presence of anisotropy could give rise to PBHs with significant angular momentum,
-	contrasting with those formed in standard inflationary scenarios. A study of this
-	possibility is left for future work}. The next phase of this research would be to apply
-the same methodology to a universe populated with radiation and dark matter, which more
-closely resembles the physical universe and the interaction between both fluids may
-affect PBH production. If such a model proves reasonable, it would also be interesting
-to improve the computation of the LTB model in App.~\ref{appc} for larger values of the
-equation of state. Despite the Jeans scale being a good approximation, the introduction
-of a non-pressureless fluid would also require the study of the pressure impact in our
-characteristic scales. Furthermore, in a radiation-dominated quantum bouncing model, one
-expects a greater blue tilt on the spectral index, which may affect the density contrast
-modes for smaller scales. Said effect could lead to a larger formation of PBHs. This
-analysis is left for future work.
+In this work, we have investigated the formation of primordial black holes within a
+Friedmann background, incorporating scalar perturbations. An alternative approach would
+be to explore PBH formation in a homogeneous yet anisotropic background. The presence of
+anisotropy could give rise to PBHs with significant angular momentum, contrasting with
+those formed in standard inflationary scenarios. A study of this possibility is left for
+future work. The next phase of this research would be to apply the same methodology to a
+universe populated with radiation and dark matter, which more closely resembles the
+physical universe and the interaction between both fluids may affect PBH production. If
+such a model proves reasonable, it would also be interesting to improve the computation
+of the LTB model in App.~\ref{appc} for larger values of the equation of state. Despite
+the Jeans scale being a good approximation, the introduction of a non-pressureless fluid
+would also require the study of the pressure impact in our characteristic scales.
+Furthermore, in a radiation-dominated quantum bouncing model, one expects a greater blue
+tilt on the spectral index, which may affect the density contrast modes for smaller
+scales. Said effect could lead to a larger formation of PBHs. This analysis is left for
+future work.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
