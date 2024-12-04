@@ -262,6 +262,7 @@ emerges from this variable in the classical limit. Let us now apply such conside
 and discuss the solutions for this quantization procedure.
 
 \subsection{Wheeler-DeWitt Equation Solutions}
+\label{sec:wdw}
 
 We start by applying the aforementioned considerations to a flat, homogeneous, and
 isotropic universe containing a single perfect fluid characterized by its pressure
@@ -400,10 +401,9 @@ which is equivalent to the Friedmann equations
 \end{equation}
 where $\bar\rho$ is the dust energy density. Also, from the derivative of
 Eq.~\eqref{friedman_scale},
-\begin{align}
+\begin{align}\label{effective_friedmann2}
 	\dot{\bar{H}} = - \frac{\kappa}{2} \bar\rho + 3\bar{H}^{2}_{0}\Omega_{q0}\bar{a}^{-6}.
 \end{align}
-
 
 In the above equations, the overdot represents the time derivative and there is an
 additional term $-\bar{H}^{2}_{0}\Omega_{q0}\bar{a}^{-6}$ when compared to the usual
@@ -414,16 +414,35 @@ resemble a typical Friedmann equation with a total energy density $\rho_{T} = \b
 state $w_q = 1$ that accounts for quantum effects to avoid the primordial
 singularity~\cite{vitenti2012large}. It is important to note that $\rho_{q}$ is not a
 physical energy density but rather an effective one that emerges from the Bohmian
-trajectory. In the perturbative analysis, the energy density will always be associated
-only with $\bar{\rho}$. For large-scale factors $\bar{a} \gg \bar{a}_{B} $,
-Eq.~\eqref{effective_friedmann} and Eq.~\eqref{bohm_scale_factor} reduce to the
-classical dust dominated a flat FLRW universe. With this, we conclude the analysis of
-our background quantum bouncing model and move to its associated perturbations. In the
-next sections, we will consider the above quantum bouncing model with $w\approx
-	10^{-10}$ and $\bar{a}(t_0)/a_B = 10^{35}$ where $t_0$ is the time during the
-contracting phase where $H(t_0) = -H_0$ for $H_0 = 70 \, \text{km/s/Mpc}$. Moreover,
-when solving the equations numerically, we use the exact expressions in terms of $w$
-without approximation.
+trajectory.
+
+	{
+		\color{red} As a final remark, it is evident that, in the classical theory, one
+		could interchangeably use either $\bar{H}^2$ or $\kappa \bar{\rho}/3$, as they are
+		related by the classical Friedmann equation. However, in the quantum framework,
+		$\bar{\rho}$ retains the same functional dependence on the scale factor, whereas
+		$\bar{H}^2$ acquires an additional term due to quantum effects absent in the
+		classical theory. Consequently, when deriving the Lagrangian for perturbations, it
+		is crucial to avoid relying on the classical Friedmann equations. This approach was
+		explicitly followed in Ref.~\cite{fluidgeral}, where the authors computed
+		perturbations up to second order without invoking any classical background
+		equations.
+
+		To compute perturbations in a Bohmian trajectory, one employs
+		Eqs.~\eqref{effective_friedmann} and \eqref{effective_friedmann2} to determine the
+		Hubble function and its time derivative, while the energy density $\bar{\rho}
+			\propto \bar{a}^{-3}$ (with $\bar{a}$ given by Eq.~\eqref{bohm_scale_factor}) is
+		used for calculating energy density perturbations. This ensures, for instance, that
+		terms such as $1/(\bar{\rho} + \bar{p})$ remain well-defined even when $\bar{H}^2$
+		or $\dot{\bar{H}}$ pass through zero.
+	}
+
+With this, we conclude the analysis of our background quantum bouncing model and move to
+its associated perturbations. In the next sections, we will consider the above quantum
+bouncing model with $w\approx 10^{-10}$ and $\bar{a}(t_0)/a_B = 10^{35}$ where $t_0$ is
+the time during the contracting phase where $H(t_0) = -H_0$ for $H_0 = 70 \,
+	\text{km/s/Mpc}$. Moreover, when solving the equations numerically, we use the exact
+expressions in terms of $w$ without approximation.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -500,12 +519,19 @@ We are mostly interested in the energy density perturbations that collapse to fo
 These perturbations can be examined using the density contrast, defined as
 \begin{align}
 	\label{densitycon}
-	\delta & \equiv \frac{\delta \rho}{\bar{\rho} + \bar{p}}
-	,\end{align}
-where $\delta\rho$ is the perturbation to the background energy density $\bar\rho$. The
-density contrast provides a normalized measurement of the energy density perturbation
-around the background matter density field. However, once again we are interested in its
-gauge-invariant form
+	\delta & \equiv \frac{\delta \rho}{\bar{\rho} + \bar{p}},
+\end{align}
+where $\delta\rho$ is the perturbation to the background energy density $\bar\rho$.
+	{\color{red} Note that the density contrast defined above appears in this form
+		when the second-order perturbations Lagrangian is derived. This means
+		that as long as $\bar{\rho} + \bar{p} > 0$, the density contrast is well-defined.
+		As discussed in Sec.~\ref{sec:wdw}, when computing the perturbations,
+		we use the Bohmian trajectory to determine the background quantities,
+		which ensures that $\bar{\rho} + \bar{p} > 0$ for all times. }
+
+The density contrast provides a normalized measurement of the energy density
+perturbation around the background matter density field. However, once again we are
+interested in its gauge-invariant form
 \begin{align}
 	\label{deltarhoinvariant}
 	\tilde{\delta\rho} & \equiv \delta\rho - \mathcal{V} \dot{\Bar{\rho}}
@@ -892,6 +918,25 @@ important to note that although we perform all the calculations with the gauge i
 variables, we will analyze our results for the physical density perturbation in the
 fluid's gauge, as defined in App.~\ref{appgauge}.
 
+{\color{red} Before we proceed, we must emphasize that we are considering the formation
+of PBHs in a classical context. We are using the quantum fields to describe the initial
+conditions of the perturbations, but the contracting phase is amplifying their
+amplitudes in a similar fashion to an inflationary phase. Such assumptions, particularly
+regarding the quantum-to-classical transition, are commonplace in the literature,
+especially in inflationary models. For example, in Ref.~\cite{Q2C}, the authors discuss
+the quantum-to-classical transition in the context of the Bohmian-De Broglie
+interpretation, showing that the quantum potential is negligible when the perturbations
+are amplified by the inflationary phase.
+
+In this work, we are not discussing the quantum-to-classical transition but are assuming
+that the perturbations are classical when amplified by the contracting phase. Moreover,
+when approaching the bounce time, the background itself is not a classical solution but
+a quantum one. Thus, in order to study the collapse of the perturbations at this phase,
+one must consider the quantum effects of the background. However, it is important to
+note that PBHs with masses within the observable ranges are formed during the
+contracting phase, where it is safe to assume that the initial quantum fields have
+already transitioned to classical behavior and are far removed from the bounce phase.}
+
 \subsection{Formation Criteria}
 
 In our context, critical collapse is the collapse of matter perturbations when they
@@ -928,8 +973,8 @@ collapsed objects that lie in this interval\footnote{Frequently we will usually 
 filter. We usually work on the Fourier space with comoving wave-number $k$, such that
 the filter is given by
 \begin{align}
-	W_r(k) & = \frac{3}{(kr)^2}\left(\frac{\sin(kr)}{kr} - \cos(kr)\right) = \frac{3}{kr}j_1(kr)
-	,\end{align}
+	W_r(k) & = \frac{3}{(kr)^2}\left(\frac{\sin(kr)}{kr} - \cos(kr)\right) = \frac{3}{kr}j_1(kr),
+\end{align}
 where $j_1$ is the spherical Bessel function of the first kind. We will see that the
 filter is necessary to analyze scales where the PBH formation is most likely to happen.
 
@@ -941,18 +986,18 @@ Ref.~\cite{Bardeen1986statistics}. Mathematically, the probability of a region w
 radius $r$ having an overdensity $\delta_i$ is given by
 \begin{align}
 	\label{gaussdelta}
-	P(\delta_i) & = \frac{1}{\sqrt{2\pi} \sigma_r} \exp(-\frac{\delta^2_i}{2 \sigma_r^2})
-	.\end{align}
+	P(\delta_i) & = \frac{1}{\sqrt{2\pi} \sigma_r} \exp(-\frac{\delta^2_i}{2 \sigma_r^2}).
+\end{align}
 This Gaussian is completely defined by its variance
 \begin{align}
 	\label{eqsigmar}
-	\sigma_r^2 & =\left< \delta_r^2(\vec{x}) \right> \equiv \sigma_r^2 = \frac{1}{2\pi^2} \int_0^\infty \frac{ \mathrm{~d}{k}}{k}\left[ P_{\tilde{\delta}}(k) \abs{W_r(k)}^2\right]
-	,\end{align}
+	\sigma_r^2 & =\left< \delta_r^2(\vec{x}) \right> \equiv \sigma_r^2 = \frac{1}{2\pi^2} \int_0^\infty \frac{ \mathrm{~d}{k}}{k}\left[ P_{\tilde{\delta}}(k) \abs{W_r(k)}^2\right],
+\end{align}
 where $P_{\tilde{\delta}}(k)$ is given by Eq.~\eqref{eqspec} with the density contrast
 modes. Unfortunately, for our bounce model, this integral does not converge. Before we
 perform this calculation, we will analyze the critical threshold for PBH formation,
 which will lead to scale constraints that will help us solve this problem.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{Critical Threshold}
 
 \label{critical_delta}
@@ -960,15 +1005,21 @@ In inflationary models, the frozen super-Hubble density perturbations re-enter t
 Hubble horizon at the end of the potential decay and collapse into a black hole if they
 have values above the critical threshold~\cite{Martin2014}. Hence the Hubble horizon is
 viewed as a characteristic scale for their formation and the threshold ($\delta_c$) is
-obtained via the Minster-Sharp equations (see Ref.~\cite{Musco2019}). However, in the
+obtained via the Misner-Sharp equations (see Ref.~\cite{Musco2019}). However, in the
 bounce scenario, the perturbations constantly evolve in time and there is not only one
 characteristic scale for the formation, since any perturbation above a critical
 threshold may collapse as they are not frozen. Thus, we must carefully analyze how to
 obtain this critical value starting with a local metric for the collapse.
 
+	{\color{red} It is important to note that we are assuming the perturbations are
+		classical at this stage. Otherwise, it would be necessary to consider a quantum
+		model for the collapse, which would require developing a quantum Misner-Sharp
+		framework with initial conditions derived from the quantum fields. This is a highly
+		complex problem that remains largely unexplored in the literature.}
+
 In App.~\ref{appc}, we find the solutions for Einstein's equations of a critical
 collapse represented with a local metric that depends on the local function $R(t,r)$,
-which led to the LTB set of solutions
+which led to the Lemaître-Tolman-Bondi (LTB) set of solutions
 \begin{align}
 	\label{ltb3a}
 	R(\theta, r) & = \frac{r (1+\delta_{ini})}{\delta_{ini}}\sin^2\left(\frac{\theta}{2}\right),                                        \\
@@ -988,8 +1039,8 @@ To choose between the positive or negative value, we use our initial condition i
 Eq.~\eqref{hinicond} and Eq.~\eqref{hdefltb} as a test, such that replacing
 Eq.~\eqref{thetadef}
 \begin{align}
-	\left.\frac{\dot{R}}{R}\right|_{ini} & =  \left.\frac{\frac{\partial R}{\partial \theta}}{R \frac{\partial t}{\partial \theta}}\right|_{ini} = \pm \bar{H}_{ini}
-	.\end{align}
+	\left.\frac{\dot{R}}{R}\right|_{ini} & =  \left.\frac{\frac{\partial R}{\partial \theta}}{R \frac{\partial t}{\partial \theta}}\right|_{ini} = \pm \bar{H}_{ini}.
+\end{align}
 From the above, we note that the positive sign in Eq.~\eqref{thetadef} leads to the
 right definition of our initial conditions. If one chooses the negative sign, and as
 $\bar{H}_{ini}$ is negative in the contracting phase, we would end up with an initially
@@ -1608,20 +1659,22 @@ energy density from the spherical collapse metric as
 	\rho(t, r) & = \bar{\rho}(t)(1 + \delta(t,r))
 	,\end{align}
 such that $\delta$ is the density contrast $\delta = \frac{\rho(t,r) -
-		\bar{\rho}(t)}{\bar{\rho}(t)}$ and $\bar{\rho}$ the background energy density.  We
-consider that there is a small overdensity in our spherical system when compared to the
-background density. We want to study a top-hat spherical collapse so that outside the
-over-dense spherical shell characterized by a critical radius $r_c$, the energy density
-is approximately the background density, i.e., ($r > r_c$)$\rightarrow$ $\rho \approx
-	\bar{\rho}$. We can add this information to the density contrast by making the
-redefinition
+		\bar{\rho}(t)}{\bar{\rho}(t)}$ and $\bar{\rho}$ the background energy density,
+{\color{red} note that this is the same density contrast as in
+		Eq.~\eqref{densitycon} but using the approximation $w \ll 1$ for cold dark
+		matter.} We consider that there is a small overdensity in our spherical system
+when compared to the background density. We want to study a top-hat spherical
+collapse so that outside the over-dense spherical shell characterized by a
+critical radius $r_c$, the energy density is approximately the background
+density, i.e., ($r > r_c$)$\rightarrow$ $\rho \approx \bar{\rho}$. We can add
+this information to the density contrast by making the redefinition
 \begin{align}
 	\delta(t, r) & \rightarrow \delta(t, r) \Theta(r-r_c)
 \end{align}
 where $\Theta$ is the Heaviside function. In this context, Eq.~\eqref{mprime} becomes
 \begin{align}
-	m(r) & = \int_0^r dr_1~ 4\pi GR^2R^\prime \left(\bar{\rho} + \delta \Theta(r-r_c)\right)
-	.\end{align}
+	m(r) & = \int_0^r dr_1~ 4\pi GR^2R^\prime \left(\bar{\rho} + \delta \Theta(r-r_c)\right).
+\end{align}
 
 We still have freedom in our metric to define the local function $R$, which can be fixed
 with initial conditions. The simplest choice would be that at initial collapse time
@@ -1630,8 +1683,8 @@ initially at rest\footnote{Note that any other initial condition is valid and su
 	to completely define $m$.}. This leads to
 \begin{align}
 	\label{mr1}
-	m(r) & = \frac{4\pi r^3G \bar{\rho}(t_{ini})}{3}\left(1 + \frac{3}{r^3}\int_0^r dr_1 (r_1)^2\delta(t_{ini}, r_1)\Theta(r-r_c)\right)
-	.\end{align}
+	m(r) & = \frac{4\pi r^3G \bar{\rho}(t_{ini})}{3}\left(1 + \frac{3}{r^3}\int_0^r dr_1 (r_1)^2\delta(t_{ini}, r_1)\Theta(r-r_c)\right).
+\end{align}
 The integral represents the expected value of the density contrast inside a spherical
 region with radius $r$ and $m$ gives the total mass inside this region. To evaluate it,
 we need to assume that at the initial time, our spherical metric possesses the same
